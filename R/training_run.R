@@ -225,7 +225,7 @@ print.tfruns_viewed_run <- function(x, ...) {
 
 do_training_run <- function(file, run_dir, echo, envir, encoding) {
 
-  with_changed_file_copy(getwd(), run_dir, {
+  with_changed_file_copy(dirname(file), run_dir, {
 
     # write script
     write_run_property("script", basename(file))
